@@ -17,8 +17,8 @@ Login through OTP only
 
 #### Conditions Implemented
 [
-    OTP once used cannot be used again
+    OTP once used cannot be used again.
     OTP valid for 5 minutes only.
-    1 minute gap for another OTP request
+    1 minute gap for another OTP request.
     5 consecutive wrong OTP will restrict the user login for 1 hour. 
 ]
