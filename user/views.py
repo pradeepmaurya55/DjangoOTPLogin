@@ -6,6 +6,7 @@ from .emails import send_otp
 from .models import User
 from datetime import *
 from rest_framework_simplejwt.tokens import RefreshToken
+import random
 
 def get_tokens(user):
     refresh = RefreshToken.for_user(user)
@@ -89,6 +90,9 @@ class VerifyOtpAPI(APIView):
             # if successful
             token = get_tokens(user)
             user.otp_fails=0
+            otp=random.randint(10000,99999)
+            user.otp=otp
+            user.save()
             
             return Response({'message' : 'OTP verified successfully ','token' : token,},
                             status = status.HTTP_200_OK)
