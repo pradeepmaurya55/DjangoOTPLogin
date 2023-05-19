@@ -12,7 +12,7 @@ Login through OTP only
 #### Generate OTP
 `POST /api/user/generateOTP/`
 #### Verify OTP
-`POST /api/user/generateOTP/`
+`POST /api/user/verifyOTP/`
 
 #### Conditions Implemented
     
